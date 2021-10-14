@@ -1,7 +1,6 @@
-import React, {useState} from 'react'
-import axios from 'axios'
+import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { fetchData, setWeatherData } from '../counter/counterSlice'
+import { fetchData } from '../counter/counterSlice'
 import './Search.module.css';
 
 
@@ -11,23 +10,14 @@ export function Search() {
     const [state, setState] = useState("")
     const [stateData, setStateData] = useState({})
 
-
-
     const onChangeHandler = (e) => {
         setState(e.target.value)
     }
 
-
-    
-
-
     const onSubmitHandler = (e) => {
         e.preventDefault();
         dispatch(fetchData(state));
-
-       
     }
-
 
     return(
         <div className="flex flex-col pt-20">

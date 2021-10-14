@@ -10,9 +10,7 @@ export function CityBox({name, temp, weather, country }) {
     const deleteWeatherData = (id) => {
         dispatch(delWeatherData(id))
     }
-
-
-
+    
     return (
         <div className="flex flex-col justify-between w-48 h-48 border-4 border-black m-2">
             <div className="flex flex-row justify-between">

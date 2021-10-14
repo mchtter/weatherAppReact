@@ -70,14 +70,9 @@ export const {
 // in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
 export const selectWeather = (state) => state.weather;
 
-
-
 export default counterSlice.reducer;
 
-
 export const fetchData = (cityName) => dispatch => {
-
-
   try {
     axios.get(`http://localhost:3001/city/?city=${cityName}`)
       .then((response) => {
@@ -85,7 +80,6 @@ export const fetchData = (cityName) => dispatch => {
           name: response.data.name,
           data: response.data
         }))
-        // console.log(response.data)
       })
 
   } catch (err) {
